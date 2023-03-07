@@ -73,7 +73,12 @@ async def restart(ctx):
         await ctx.reply("restarting the server")
     except:
         await ctx.reply("oops idk wat happened contact nadeem")
-
+@bot.command()
+async def ping(ctx):
+    """
+    Ping!
+    """
+    await ctx.reply('Pong!   `{0} seconds`'.format(round(bot.latency, 1)))
 
 @bot.command()
 @commands.has_permissions(administrator=True)
